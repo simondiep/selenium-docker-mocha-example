@@ -1,0 +1,8 @@
+FROM node:latest
+
+RUN npm install selenium-webdriver chai
+RUN npm install -g mocha
+
+COPY example-test.js /
+
+CMD mocha example-test.js
